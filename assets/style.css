@@ -1,0 +1,105 @@
+/* Add goggle font family for the site */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@400;500&family=Noto+Serif&family=Playfair+Display:wght@500&display=swap');
+
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "NoTO-Seri", sans-serif;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.sidebar {
+    width: 300px;
+    padding: 2rem 0rem 2rem 1rem;
+    background-color: black;
+}
+
+.sidebar h2 {
+    color: white;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    padding: 1rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s ease-out;
+}
+
+/* Styling hover effect and active item */
+.menu-item:hover,
+.menu-item.is-active {
+    color: #B0C1D9;
+    background-color: #3b4b59;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.content h1 {
+    margin-bottom: 1rem;
+}
+
+/* style hamburger menu area */
+.hamburger-container {
+    border: 1px solid #3b4b59;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-toggle {
+    background-color: #B0C1D9;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    position: relative;
+    top: 17%;
+}
+
+/* Style hamburger horizantal bars */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color:#3b4b59;
+    margin: 5px auto;
+    transition: all 0.5x ease;
+}
+
+/* Stlye for toggle effect */
+.menu-toggle.menu-item.is-active(2) {
+    opacity: 0;
+}
+
+.menu-toggle.menu-item.is-active(1) {
+    transform: traslateY(8px) rotate(45deg);
+}
+.menu-toggle.menu-item.is-active(2) {
+    transform: traslateY(-8px) rotate(-45deg);
+}
+
+/* Style for larger screens */
+@media(max-width:1024px){
+    .menu-toggle{
+        display: block;
+    }
+    
+}
