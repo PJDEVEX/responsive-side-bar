@@ -63,7 +63,7 @@
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    /* display: none; */
+    display: none;
 }
 
 .hamburger {
@@ -83,15 +83,17 @@
 }
 
 /* Stlye for toggle effect */
-.menu-toggle.menu-item.is-active(2) {
+.menu-toggle.is-active .bar:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle.menu-item.is-active(1) {
-    transform: traslateY(8px) rotate(45deg);
+.menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.3s;
 }
-.menu-toggle.menu-item.is-active(2) {
-    transform: traslateY(-8px) rotate(-45deg);
+.menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.3s;
 }
 
 /* Style for larger screens */
