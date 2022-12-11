@@ -24,7 +24,12 @@
 .sidebar h2 {
     color: white;
     font-size: 0.85rem;
-    margin-bottom: 0.5rem;
+    display: none;
+
+}
+
+.menu {
+    padding-top: 2rem;
 }
 
 .menu-item {
@@ -55,7 +60,8 @@
 .hamburger-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
 }
 
 .menu-toggle {
@@ -90,14 +96,16 @@
 .menu-toggle.is-active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
     transition: 0.3s;
+    background-color: white;
 }
 .menu-toggle.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
     transition: 0.3s;
+    background-color: white;
 }
 
 /* Style for larger screens */
-@media(max-width:1024px){
+@media(max-width:1024px) {
     .menu-toggle{
         display: block;
     }
@@ -115,4 +123,10 @@
     .sidebar.is-active {
         left: 0;
     }
+
+    .sidebar h2 {
+        color: white;
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+}
 }
